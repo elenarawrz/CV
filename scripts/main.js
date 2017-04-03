@@ -6,10 +6,10 @@ $(() => {
     $(`#${section} > h3`).text(data[section].title);
   },
 
-  load = (section, callback) => {
+  load = (section, callback, parent) => {
     setTitle(section);
     content = data[section].content.reduce(callback, '');
-    $(`#${section}`).append(content);
+    $(`#${parent || section}`).append(content);
   },
 
   loaders = [
@@ -38,7 +38,7 @@ $(() => {
           <span class='primary'>${lang.language} |</span>
           ${lang.level}
         </p>`),
-    () => load('technologies', (acc, tech) => acc += `<p>${tech}</p>`),
+    () => load('technologies', (acc, tech) => acc += `<li>${tech}</li>`, 'techList'),
     () => load('certifications', (acc, cert) => acc += `<p>
         ${cert.name} |
         <span class='secondary'>${cert.date}</span>
