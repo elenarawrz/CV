@@ -1,0 +1,27 @@
+body {
+  font-family: 'verdana';
+  font-size: 12px;
+}
+
+h1 { font-size: 30px; }
+h2 { font-size: 18px; }
+h3 { font-size: 16px; }
+h1, h2, h3 { margin: 10px 0 10px 0 }
+
+header {
+  display: flex;
+}
+
+#head {
+  flex-grow: 5;
+  align-self: flex-end;
+}
+
+#contactDetails {
+  flex-grow: 1;
+  align-self: flex-end;
+  align-items: center;
+  background-color: #DDD;
+  border-radius: 10px;
+  padding-left: 20px;
+}

@@ -14,7 +14,7 @@ $(() => {
 
   loaders = [
     () => {
-          setTitle('contactDetails');
+          //setTitle('contactDetails');
           Object.keys(contactInfo)
                 .forEach(key => $(`#${key}`).text(contactInfo[key]));
         },

@@ -1,5 +1,6 @@
 var contactInfo = {
   name: 'Alma Elena Valle Ruiz',
+  degree: 'Computer Systems Engineer',
   location: 'Zapopan, Jalisco, Mexico',
   mobile: '(644) 168 0699',
   email: 'elenavaller@hotmail.com',
