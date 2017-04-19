@@ -4,72 +4,54 @@
     <meta charset='utf-8'>
     <title>Resume Elena Valle</title>
     <link rel='stylesheet' href='css/lib/font-awesome.min.css'>
-    <link rel='stylesheet' href='css/main.css'>
+    <link rel='stylesheet' href='css/main.css' media='all'>
     <script src='scripts/lib/jquery-3.2.0.min.js'></script>
     <script src='scripts/info.js'></script>
     <script src='scripts/main.js'></script>
   </head>
   <body>
     <!--button type='button' id='lang'>es</button-->
-    <header>
-      <section id='head'>
-        <h1 id='name'></h1>
-        <h2 id='degree'></h2>
-      </section>
+    <main>
+      <header>
+        <section id='head'>
+          <h1 id='name'></h1>
+          <h2 id='degree'></h2>
+        </section>
 
-      <section id='contactDetails'>
-        <h3></h3>
-        <p>
-          <span><i class='fa fa-map-marker fa-lg'></i></span>
-          <span id='location'></span>
-        </p>
-        <p>
-          <span><i class='fa fa-mobile fa-lg'></i></span>
-          <span id='mobile'></span>
-        </p>
-        <p>
-          <span><i class='fa fa-envelope fa-lg'></i></span>
-          <span id='email'></span>
-        </p>
-        <p>
-          <span><i class='fa fa-skype fa-lg'></i></span>
-          <span id='skype'></span>
-        </p>
-        <p>
-          <span><i class='fa fa-linkedin-square fa-lg'></i></span>
-          <span id='linkedin'></span>
-        </p>
-      </section>
-    </header>
+        <section id='contactDetails'>
+          <ul>
+            <li id='location'></li>
+            <li id='mobile'></li>
+            <li id='email'></li>
+            <li id='skype'></li>
+            <li id='linkedin'></li>
+          </ul>
+        </section>
+      </header>
 
-    <section id='summary'>
-      <h3></h3>
-    </section>
+      <article>
+        <section id='col1'>
+          <section id='summary'></section>
+          <section id='workExperience'></section>
+          <section id='education'>
+            <p>
+              <span id='school' class='primary'></span>
+              <span id='period' class='secondary'></span>
+            </p>
+            <p id='major'></p>
+          </section>
+        </section>
 
-    <section id='workExperience'>
-      <h3></h3>
-    </section>
-
-    <section id='education'>
-      <h3></h3>
-      <p>
-        <span id='school' class='primary'></span>
-        <span id='period' class='secondary'></span>
-      </p>
-      <p id='major'></p>
-    </section>
-
-    <section id='languages'>
-      <h3></h3>
-    </section>
-
-    <section id='technologies'>
-      <h3></h3>
-      <ul id='techList'></ul>
-    </section>
-
-    <section id='certifications'>
-      <h3></h3>
-    </section>
+        <section id='col2'>
+          <section id='languages'>
+            <ul id='langList'></ul>
+          </section>
+          <section id='technologies'>
+            <ul id='techList'></ul>
+          </section>
+          <section id='certifications'></section>
+        </section>
+      </article>
+    </main>
   </body>
 </html>

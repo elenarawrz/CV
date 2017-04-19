@@ -3,7 +3,7 @@ $(() => {
   var data = dataEng,
 
   setTitle = section => {
-    $(`#${section} > h3`).text(data[section].title);
+    $(`#${section}`).prepend(`<h3>${data[section].title}</h3>`);
   },
 
   load = (section, callback, parent) => {
@@ -19,28 +19,29 @@ $(() => {
                 .forEach(key => $(`#${key}`).text(contactInfo[key]));
         },
     () => load('summary', (acc, p) =>  acc += `<p>${p}</p>`),
-    () => load('workExperience', (acc, work) => acc += `<p>
-          <span class='primary'>${work.position} |</span>
-          ${work.company} |
+    () => load('workExperience', (acc, work) => acc += `<div class='work'>
+        <p>
+          <span class='primary'>${work.position}&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+          ${work.company}&nbsp;&nbsp;|&nbsp;&nbsp;
           <span class='secondary'>${work.period}</span>
         </p>
         <p>
           <span id='activities'>${work.activities}</span>
           (<span id='tools'>${work.tools}</span>)
-        </p>`),
+        </p></div>`),
     () => {
           setTitle('education');
-          $(`#school`).text(data.education.school + ' |');
+          $(`#school`).html(data.education.school + '&nbsp;&nbsp;|&nbsp;&nbsp;');
           $(`#period`).text(data.education.period);
           $(`#major`).text(data.education.major);
         },
-    () => load('languages', (acc, lang) => acc += `<p>
-          <span class='primary'>${lang.language} |</span>
-          ${lang.level}
-        </p>`),
+    () => load('languages', (acc, lang) => acc += `<li>
+          ${lang.language} |
+          <span class='secondary'>${lang.level}</span>
+        </li>`, 'langList'),
     () => load('technologies', (acc, tech) => acc += `<li>${tech}</li>`, 'techList'),
     () => load('certifications', (acc, cert) => acc += `<p>
-        ${cert.name} |
+        ${cert.name}<br />
         <span class='secondary'>${cert.date}</span>
       </p>`)
   ];

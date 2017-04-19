@@ -2,7 +2,7 @@ var contactInfo = {
   name: 'Alma Elena Valle Ruiz',
   degree: 'Computer Systems Engineer',
   location: 'Zapopan, Jalisco, Mexico',
-  mobile: '(644) 168 0699',
+  mobile: '+52 (644) 168 0699',
   email: 'elenavaller@hotmail.com',
   skype: 'elenarawrz',
   linkedin: 'mx.linkedin.com/in/elenavalle'
@@ -15,8 +15,8 @@ var dataEng = {
   summary: {
     title: 'Summary',
     content: [
-      'Results-driven software engineer with 3 years of hands-on experience as a full-stack developer, proficient in technologies such as Java, C#, ORMs, SQLDBs, HTML, Javascript, AJAX, Node.js, amongst others.',
-      'Participated in different phases of software life-cycle, mainly in analysis, design and maintenance, following waterfall and agile models.',
+      'Results-driven software engineer with 4 years of hands-on experience as a full-stack developer, proficient in technologies such as Javascript, Node.js, AJAX, Java, C#, ORMs, SQLDBs, HTML, amongst others.',
+      'Participated in most of the phases of software life-cycle, mainly in implementation, testing and maintenance, following waterfall and agile models.',
       'Experience working on-site and remote, in small and midsized teams, and as a solo-freelancer.'
     ]
   },
@@ -29,6 +29,13 @@ var dataEng = {
   workExperience: {
     title: 'Work Experience',
     content: [
+      {
+        position: 'Software Engineer',
+        company: 'Wizeline, Zapopan, Jalisco',
+        period: 'July 2016 - Present',
+        activities: 'Development and support of REST APIs, unit testing, support and enhancement of front and back end of DowJones\' web applications.',
+        tools: 'Node.js, React.js, ES6, Mocha, Sinon, Swagger, Github'
+      },
       {
         position: 'Software Engineer',
         company: 'Pinnacle Aerospace, Obregon, Sonora',
@@ -72,6 +79,7 @@ var dataEng = {
     content: [
       'Javascript',
       'Node.js',
+      'React.js',
       'C#',
       'Java',
       'jQuery',
